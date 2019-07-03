@@ -46,5 +46,38 @@
         <item>Rain</item>
         <item>Cold</item>
     </string-array>
+
+    <string-array name="Breed">
+        <item>กข5</item>
+        <item>กข6</item>
+        <item>กข7</item>
+        <item>กข8</item>
+        <item>กข15</item>
+        <item>กข29(ชัยนาท 80)</item>
+        <item>กข31(ปทุมธานี 80)</item>
+        <item>กข35(รังสิต 80)</item>
+        <item>กข39</item>
+        <item>กข49</item>
+        <item>กข71</item>
+        <item>สุพรรณบุรี1</item>
+        <item>สุพรรณบุรี2</item>
+        <item>สุพรรณบุรี3</item>
+        <item>ขาวดอกมะลิ105</item>
+        <item>พิษณุโลก2</item>
+        <item>พิษณุโลก3</item>
+        <item>ชัยนาท1</item>
+        <item>ชัยนาจ2</item>
+        <item>ปทุมธานี1</item>
+        <item>ปทุมธานี60</item>
+        <item>ขาวตาแห้ง17</item>
+        <item>ข้าวเจ้าหอมพิษณุโลก1</item>
+        <item>ข้าวเจ้าหอมพิษณุโลก</item>
+    </string-array>
+
+    <string-array name="Cultivate">
+        <item>นาดำ</item>
+        <item>นาหว่านต่ม</item>
+        <item>นาหว่านแห้ง</item>
+    </string-array>
     <string name="title_activity_farm">farm</string>
 </resources>

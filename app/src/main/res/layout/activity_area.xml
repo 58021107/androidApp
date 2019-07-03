@@ -10,9 +10,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="72dp"
         android:text="อากาศ:"
         android:textSize="18sp"
         app:fontFamily="@font/athiti_extralight"
@@ -27,7 +27,7 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView04" />
 
@@ -50,15 +50,15 @@
 
     <TextView
         android:id="@+id/textView02"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="240dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
         android:text="ไร่"
         android:textSize="18sp"
         app:fontFamily="@font/athiti_extralight"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView04" />
 
     <TextView
@@ -93,8 +93,8 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp"
@@ -171,8 +171,8 @@
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
+        android:layout_width="110dp"
+        android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -181,10 +181,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/radioSoil"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintVertical_bias="0.234" />
 
     <!--<Button-->
         <!--android:id="@+id/button2"-->

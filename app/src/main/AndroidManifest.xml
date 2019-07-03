@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".farm"></activity>
+        <activity android:name=".suggestion" />
+        <activity android:name=".farm" />
         <activity android:name=".calender" />
         <activity
             android:name=".price"

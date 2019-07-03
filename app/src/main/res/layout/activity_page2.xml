@@ -44,18 +44,4 @@
         android:textAllCaps="false"
         android:textSize="20sp" />
 
-    <!--<Button-->
-        <!--android:id="@+id/buttonNext"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="500dp"-->
-        <!--android:text="Next"-->
-        <!--android:textSize="20sp"-->
-        <!--android:padding="10dp"-->
-        <!--android:gravity="center"-->
-        <!--android:textAllCaps="false"-->
-        <!--android:layout_marginRight="80dp"-->
-        <!--android:layout_marginLeft="80dp"-->
-        <!--android:layout_marginBottom="20dp"/>-->
-
 </RelativeLayout>
