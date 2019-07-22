@@ -60,8 +60,5 @@ public class nourish extends AppCompatActivity {
 //        });
 
     }
-    public  void Price(View view){
-        Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.oae.go.th/"));
-        startActivity(browseIntent);
-    }
+
 }

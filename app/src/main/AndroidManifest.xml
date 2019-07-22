@@ -13,6 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ricedata"></activity>
+        <activity
+            android:name=".FarmDetail"
+            android:label="@string/title_activity_farm_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".suggestion" />
         <activity android:name=".farm" />
         <activity android:name=".calender" />

@@ -80,4 +80,6 @@
         <item>นาหว่านแห้ง</item>
     </string-array>
     <string name="title_activity_farm">farm</string>
+    <string name="title_activity_farm_detail">FarmDetail</string>
+    <string name="title_activity_show_data">ricedata</string>
 </resources>

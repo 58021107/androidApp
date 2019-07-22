@@ -1,5 +1,7 @@
 package com.example.administrator.power;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,6 +34,16 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
         spinner2.setOnItemSelectedListener(this);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
+
+
+        Button product = (Button)findViewById(R.id.product);
+        product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(area.this,ricedata.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
