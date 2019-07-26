@@ -50,14 +50,14 @@ public class nourish extends AppCompatActivity {
             }
         });
 
-//        Button Price = (Button)findViewById(R.id.buttonPrice);
-//        Price.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(nourish.this,price.class);
-//                startActivity(intent);
-//            }
-//        });
+        Button Price = (Button)findViewById(R.id.buttonPrice);
+        Price.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.oae.go.th/view/1/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81/TH-TH"));
+                startActivity(browserIntent);
+            }
+        });
 
     }
 

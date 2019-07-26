@@ -18,7 +18,7 @@ import java.net.URL;
 public class ricedata extends AppCompatActivity {
 
     ListView listView;
-    private static final String newurl = "http://localhost/Project/data/rice_table.php";
+    private static final String newurl = "http://10.0.2.2/project/data/rice_table.php";
     private String json;
     private JSONArray urls;
     public Getjson getjsonobj;
@@ -40,12 +40,13 @@ public class ricedata extends AppCompatActivity {
             protected void onPreExecute(){
                 super.onPreExecute();
                 loading = ProgressDialog.show(ricedata.this, "Loading...", "Please Wail...", true, true);
+//                int x = x + 1;
             }
             @Override
             protected void onPostExecute(String s){
                 super.onPostExecute(s);
                 loading.dismiss();
-                getjsonobj = new Getjson();
+                getjsonobj = new Getjson(s);
             }
 
             @Override

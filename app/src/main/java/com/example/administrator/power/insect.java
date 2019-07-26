@@ -29,14 +29,14 @@ import java.util.List;
 public class insect extends AppCompatActivity {
 
     private RequestQueue mQueue;
-    List<Data> insect_lists = new ArrayList<>();
+    List<Data> inscet_lists = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_insect);
+        setContentView(R.layout.activity_inscet);
 
-        ListView listView = findViewById(R.id.insect_list);
+        ListView listView = findViewById(R.id.inscet_list);
         mQueue = Volley.newRequestQueue(this);
 
         getJson(listView);
@@ -44,7 +44,7 @@ public class insect extends AppCompatActivity {
 
     public void getJson(final ListView listView) {
 
-        String url = "http://10.0.2.2/project/data/insect.php";
+        String url = "http://10.0.2.2/project/data/inscet.php";
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -57,7 +57,7 @@ public class insect extends AppCompatActivity {
                                 String  insect_id = rice.getString("inscet_id");
                                 String insect_name = rice.getString("inscet_name");
 
-                                insect_lists.add(new Data(insect_id, insect_name));
+                                inscet_lists.add(new Data(insect_id, insect_name));
                             }
 
                             RiceApdapter adapter = new RiceApdapter();
@@ -66,7 +66,7 @@ public class insect extends AppCompatActivity {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                                     Intent intent = new Intent(insect.this, InsectDetail.class);
-                                    intent.putExtra("name", insect_lists.get(position).getId());
+                                    intent.putExtra("name", inscet_lists.get(position).getId());
                                     startActivity(intent);
                                 }
                             });
@@ -88,7 +88,7 @@ public class insect extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return insect_lists.size();
+            return inscet_lists.size();
         }
 
         @Override
@@ -108,7 +108,7 @@ public class insect extends AppCompatActivity {
 
             TextView name_list = convertView.findViewById(R.id.insect_row);
 
-            name_list.setText(insect_lists.get(position).getName());
+            name_list.setText(inscet_lists.get(position).getName());
             return convertView;
         }
     }

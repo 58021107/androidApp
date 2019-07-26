@@ -22,7 +22,7 @@ public class InsectDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.insect_detail);
+        setContentView(R.layout.inscet_detail);
 
         TextView insect_name = findViewById(R.id.insect_name);
         TextView insect_feature = findViewById(R.id.insect_feature);
@@ -43,11 +43,11 @@ public class InsectDetail extends AppCompatActivity {
                 newString= null;
             } else {
                 newString= extras.getString("name");
-                url = "http://10.0.2.2/project/data/InsectDetail.php?id="+newString;
+                url = "http://10.0.2.2/project/data/InscetDetail.php?id="+newString;
             }
         } else {
             newString= (String) savedInstanceState.getSerializable("name");
-            url = "http://10.0.2.2/project/data/InsectDetail.php?id="+newString;
+            url = "http://10.0.2.2/project/data/InscetDetail.php?id="+newString;
         }
 
 

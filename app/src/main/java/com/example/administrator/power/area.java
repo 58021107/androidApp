@@ -40,7 +40,7 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
         product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(area.this,ricedata.class);
+                Intent intent = new Intent(area.this,rice_table.class);
                 startActivity(intent);
             }
         });

@@ -27,14 +27,15 @@ public class RiceDetail extends AppCompatActivity {
         TextView name = findViewById(R.id.name);
         TextView feature = findViewById(R.id.feature);
         TextView area = findViewById(R.id.area);
+        TextView product = findViewById(R.id.product);
         TextView nature = findViewById(R.id.nature);
         mQueue = Volley.newRequestQueue(this);
 
-        getJson(name, feature, area, nature, savedInstanceState);
+        getJson(name, feature, area, product, nature, savedInstanceState);
 
     }
 
-    public void getJson(final TextView name, final TextView feature, final TextView area, final TextView nature, Bundle savedInstanceState) {
+    public void getJson(final TextView name, final TextView feature, final TextView area, final TextView product, final TextView nature, Bundle savedInstanceState) {
         String newString;
         String url = "";
         if (savedInstanceState == null) {
@@ -61,11 +62,13 @@ public class RiceDetail extends AppCompatActivity {
                                 String rice_name = rice.getString("rice_ta_name");
                                 String rice_feature = rice.getString("feature");
                                 String rice_area = rice.getString("area");
+                                String rice_product = rice.getString("product");
                                 String rice_nature = rice.getString("nature");
 
                                 name.setText(rice_name);
                                 feature.setText(rice_feature);
                                 area.setText(rice_area);
+                                product.setText(rice_product);
                                 nature.setText(rice_nature);
                             }
 
