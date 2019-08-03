@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Power</string>
+    <string name="app_name">แนะนำพันธุ์ข้าว</string>
     <string name="rice5">"\t             ข้อมูลพันธุ์ข้าว กข 5 \n\t
         ชื่อพันธุ์: กข5 \n\t
         ชนิด: ข้าวเจ้า \n\t
@@ -32,19 +32,21 @@
         -ไม่ต้านทานโรคใบหงิก โรคคอรวงเน่า และโรคใบจุดสีน้ำตาล \n
         -ไม่ต้านทานเพลี้ยกระโดดสีน้ำตาล และหนอนกอ \n
         พื้นที่แนะนำ: ทุกภาคที่มีการชลประทานหรือควบคุมระดับน้ำได้ \n "</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">หน้า 1 </string>
+    <string name="title_dashboard">หน้า 2</string>
 
     <string-array name="kindOfSoil">
-        <item>ดินร่วน</item>
-        <item>ดินเหนียว</item>
         <item>ดินทราย</item>
+        <item>ดินเหนียว</item>
+        <item>ดินร่วน</item>
     </string-array>
 
     <string-array name="weathers">
-        <item>Hot</item>
-        <item>Rain</item>
-        <item>Cold</item>
+        <item>อากาศร้อน</item>
+        <item>อากาศเย็น</item>
+        <item>อากาศแห้งแล้ง</item>
+        <item>อากาศเย็น+หมอก</item>
+        <item>อากาศร้อน+ฝนตก</item>
     </string-array>
 
     <string-array name="Breed">
@@ -76,10 +78,11 @@
 
     <string-array name="Cultivate">
         <item>นาดำ</item>
-        <item>นาหว่านต่ม</item>
+        <item>นาหว่านตม</item>
         <item>นาหว่านแห้ง</item>
+        <item>นาขั้นบันได</item>
     </string-array>
-    <string name="title_activity_farm">farm</string>
-    <string name="title_activity_farm_detail">FarmDetail</string>
+    <string name="title_activity_farm">วิธีเพาะปลูก</string>
+    <string name="title_activity_farm_detail">รายละเอียดพาะปลูก</string>
     <string name="title_activity_show_data">ricedata</string>
 </resources>

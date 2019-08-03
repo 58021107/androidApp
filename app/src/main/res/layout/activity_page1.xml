@@ -28,11 +28,11 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/progressBar"
+            android:layout_above="@+id/textView9"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="-21dp"
             android:gravity="center"
             android:padding="15dp"
             android:text="Rice Cultivation"
@@ -57,5 +57,23 @@
             android:layout_marginBottom="-3.4dp"
             android:max="10"
             android:theme="@style/ProgressBarStyle" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_marginBottom="20dp"
+            android:text="แนะนำการปลูกข้าว"
+            android:textSize="24sp"
+            app:fontFamily="@font/pridi_extralight" />
     </RelativeLayout>
 </RelativeLayout>

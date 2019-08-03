@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".rice_tableDetail"></activity>
+        <activity android:name=".InsertData"></activity>
+        <activity android:name=".Update" />
+        <activity android:name=".rice_tableDetail" />
         <activity android:name=".rice_table">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,28 +28,29 @@
             android:name=".FarmDetail"
             android:label="@string/title_activity_farm_detail"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".suggestion" />
+        <activity android:name=".suggestion"
+            android:label="แสดงคำแนะนำ"/>
         <activity android:name=".farm" />
         <activity android:name=".calender" />
         <activity
             android:name=".price"
-            android:label="Price"
+            android:label="ราคาข้าว"
             android:parentActivityName=".nourish" />
         <activity
             android:name=".fertilizer"
-            android:label="Fertilizer"
+            android:label="ปุ๋ย"
             android:parentActivityName=".nourish" />
         <activity
             android:name=".weed"
-            android:label="Weed"
+            android:label="วัชพืช"
             android:parentActivityName=".nourish" />
         <activity
             android:name=".insect"
-            android:label="Insect"
+            android:label="แมลงศัตรูพืช"
             android:parentActivityName=".nourish" />
         <activity
             android:name=".disease"
-            android:label="Disease"
+            android:label="โรคข้าว"
             android:parentActivityName=".nourish" />
         <activity android:name=".page1">
             <intent-filter>
@@ -63,40 +66,44 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".nourish"
-            android:label="Care"
+            android:label="ดูแลบำรุงรักษา"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".rice"
-            android:label="Rice"
+            android:label="พันธุ์ข้าว"
             android:parentActivityName=".rice_var" />
         <activity
             android:name=".area"
-            android:label="Area"
+            android:label="พื้นที่เพาะปลูก"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".farming"
-            android:label="Farming"
+            android:label="วิธีเพาะปลูก"
             android:parentActivityName=".rice_var" />
         <activity
             android:name=".RiceDetail"
-            android:label="RiceDetail"
+            android:label="รายละเอียดพันธุ์ข้าว"
             android:parentActivityName=".rice" />
         <activity
             android:name=".DiseaseDetail"
-            android:label="DiseaseDetail"
+            android:label="รายละเอียดโรคข้าว"
             android:parentActivityName=".disease" />
         <activity
             android:name=".InsectDetail"
-            android:label="InsectDetail"
+            android:label="รายละเอียดแมลงศัตรูพืช"
             android:parentActivityName=".insect" />
         <activity
             android:name=".WeedDetail"
-            android:label="WeedDetail"
+            android:label="รายละเอียดวัชพืช"
             android:parentActivityName=".weed" />
         <activity
             android:name=".FertilizerDetail"
-            android:label="FertilizerDetail"
+            android:label="รายละเอียดปุ๋ย"
             android:parentActivityName=".fertilizer" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

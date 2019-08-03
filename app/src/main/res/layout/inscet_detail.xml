@@ -31,7 +31,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Feature" />
+                android:text="ลักษณะ: " />
 
             <TextView
                 android:id="@+id/insect_feature"
@@ -53,7 +53,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Outbreak" />
+                android:text="การระบาด: " />
 
             <TextView
                 android:id="@+id/insect_outbreak"
@@ -75,7 +75,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Protect" />
+                android:text="การป้องกันกำจัด: " />
 
             <TextView
                 android:id="@+id/insect_protect"

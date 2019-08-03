@@ -34,7 +34,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Feature"
+                android:text="ลักษณะประจำพันธุ์: "
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -59,7 +59,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Area" />
+                android:text="พื้นที่แนะนำ: " />
 
             <TextView
                 android:id="@+id/area"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Product" />
+                android:text="ผลผลิต (กิโลกรัมต่อไร่): " />
 
             <TextView
                 android:id="@+id/product"
@@ -103,7 +103,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Nature" />
+                android:text="ลักษณะ: " />
 
             <TextView
                 android:id="@+id/nature"
