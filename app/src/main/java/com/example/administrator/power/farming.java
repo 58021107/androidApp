@@ -97,16 +97,18 @@ public class farming extends AppCompatActivity implements AdapterView.OnItemSele
 //            }
 //        });
 
-        Button btnsug = (Button) findViewById(R.id.btnsug);
-        btnsug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(farming.this,suggestion.class);
-                startActivity(intent);
-            }
-        });
-        //ปุ่มแสดงคำแนะนำ
+//        Button btnsug = (Button) findViewById(R.id.btnsug);
+//        btnsug.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(farming.this,suggestion.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //ปุ่มแสดงคำแนะนำ
     }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

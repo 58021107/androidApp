@@ -91,6 +91,7 @@
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editFarming"
+        android:onClick="Display"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginStart="31dp"

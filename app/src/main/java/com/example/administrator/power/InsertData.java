@@ -54,7 +54,7 @@ public class InsertData extends AppCompatActivity {
     EditText editName;
     EditText editDate;
     EditText editFarming;
-    private Context context;
+//    private Context context;
 //    private  int byGetOrPost = 0;
 
 //    Button btn_insert, btn_sug;
@@ -63,6 +63,32 @@ public class InsertData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_data);
+        Display();
+    }
+
+    private void Display() {
+        Button Display = findViewById(R.id.Display);
+        final EditText[] editName = {findViewById(R.id.editName)};
+        final EditText[] editDate = {findViewById(R.id.editDate)};
+        final EditText[] editFarming = {findViewById(R.id.editFarming)};
+
+//        RadioButton radioButton1 = findViewById(R.id.radioButton1);
+//        RadioButton radioButton2 = findViewById(R.id.radioButton2);
+//        Display.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String kindOfSoil = spinner1.getSelectedItem().toString();
+//                String weathers = spinner2.getSelectedItem().toString();
+//                Toast.makeText(area.this, "How to" +kindOfSoil, Toast.LENGTH_SHORT);
+//                Toast.makeText(area.this,"How to" +weathers, Toast.LENGTH_SHORT);
+
+//                editName[0] = (EditText)findViewById(R.id.editName);
+//                editDate[0] = (EditText)findViewById(R.id.editDate);
+//                editFarming[0] = (EditText)findViewById(R.id.editFarming);
+//                String message = editName.getText().toSting();
+//            }
+//        });
+
     }
 
 //    public InsertData(Context context, EditText editName, EditText editDate, EditText editFarming, int flag){

@@ -35,6 +35,11 @@
     <string name="title_home">หน้า 1 </string>
     <string name="title_dashboard">หน้า 2</string>
 
+    <string-array name="radioSoid">
+        <item>นอก</item>
+        <item>ใน</item>
+    </string-array>
+
     <string-array name="kindOfSoil">
         <item>ดินทราย</item>
         <item>ดินเหนียว</item>

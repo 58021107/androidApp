@@ -27,13 +27,20 @@ public class rice_tableDetail extends AppCompatActivity {
         setContentView(R.layout.activity_rice_table_detail);
 
         TextView name = findViewById(R.id.name);
+        TextView feature = findViewById(R.id.feature);
+        TextView area = findViewById(R.id.area);
         TextView product = findViewById(R.id.product);
+        TextView nature = findViewById(R.id.nature);
+        TextView soil = findViewById(R.id.soil);
+        TextView irrigation = findViewById(R.id.irrigation);
+        TextView weather = findViewById(R.id.weather);
+
         mQueue = Volley.newRequestQueue(this);
 
-        getJson(name, product, savedInstanceState);
+        getJson(name, feature, area, product, nature, soil, irrigation, weather, savedInstanceState);
     }
 
-    private void getJson(final TextView name, final TextView product, Bundle savedInstanceState) {
+    private void getJson(final TextView name,final TextView feature, final TextView area, final TextView product, final TextView nature, final TextView soil, final TextView irrigation, final TextView weather, Bundle savedInstanceState) {
         String newString;
         String url = "";
         if (savedInstanceState == null){
@@ -56,10 +63,22 @@ public class rice_tableDetail extends AppCompatActivity {
                     for (int i = 0; i < response.length(); i++){
                         JSONObject rice = response.getJSONObject(i);
                         String rice_name = rice.getString("rice_ta_name");
+                        String rice_feature = rice.getString("feature");
+                        String rice_area = rice.getString("area");
                         String rice_product = rice.getString("product");
+                        String rice_nature = rice.getString("nature");
+                        String rice_soil = rice.getString("soil");
+                        String rice_irrigation = rice.getString("irrigation");
+                        String rice_weather = rice.getString("weather");
 
                         name.setText(rice_name);
+                        feature.setText(rice_feature);
+                        area.setText(rice_area);
                         product.setText(rice_product);
+                        nature.setText(rice_nature);
+                        soil.setText(rice_soil);
+                        irrigation.setText(rice_irrigation);
+                        weather.setText(rice_weather);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
