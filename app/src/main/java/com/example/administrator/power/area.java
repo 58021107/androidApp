@@ -22,6 +22,7 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
     private RadioButton radioSoidButton;
     private String radioSoidButtonId;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,8 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
 //
 //            }
 //        });
+
+
     }
 
     private void Display() {
@@ -61,8 +64,8 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
         final Spinner spinner2 = findViewById(R.id.spinner2);
 
         final RadioGroup radioSoid = findViewById(R.id.radioSoil);
-        final RadioButton radioButton1 = findViewById(R.id.radioButton1);
-        final RadioButton radioButton2 = findViewById(R.id.radioButton2);
+        final RadioButton radioButton1 = findViewById(R.id.radio_out);
+        final RadioButton radioButton2 = findViewById(R.id.radio_in);
         Display.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,42 +78,48 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
                 radioSoidButton = (RadioButton) findViewById(selectId);
 
 
-                Toast.makeText(area.this,kindOfSoil,Toast.LENGTH_SHORT).show();
-                Toast.makeText(area.this,radioSoidButton.getText(),Toast.LENGTH_SHORT).show();
-                Toast.makeText(area.this,weathers,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(area.this,kindOfSoil,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(area.this,radioSoidButton.getText(),Toast.LENGTH_SHORT).show();
+//                Toast.makeText(area.this,weathers,Toast.LENGTH_SHORT).show();
 
 
-
-                if (kindOfSoil == "ดินทราย"){
-                    kindOfSoilId = "1";
-                }else if (kindOfSoil == "ดินเหนียว"){
+//                Toast.makeText(area.this,"aaaaaaaaaaaa",Toast.LENGTH_SHORT).show();
+                if (kindOfSoil.equals("ดินทราย")){
+                      kindOfSoilId = "1";
+                }else if (kindOfSoil.equals("ดินเหนียว")){
                     kindOfSoilId = "2";
-                }else if (kindOfSoil == "ดินร่วน"){
+                }else if (kindOfSoil.equals("ดินร่วน")){
                     kindOfSoilId = "3";
                 }
 
 
+//                Toast.makeText(area.this,"aaaaaaaaaaaa",Toast.LENGTH_SHORT).show();
+                int selectRButton = 0;
 
-                if (weathers == "อากาศร้อน" ){
+                if ((radioSoidButton.getText()).equals("นอก")){
+                    selectRButton = 1;
+                }else if ((radioSoidButton.getText()).equals("ใน")){
+                    selectRButton = 2;
+                }
+
+
+
+                if (weathers.equals("อากาศร้อน" )){
                     weathersId = "1";
-                }else if (weathers == "อากาศเย็น"){
+                }else if (weathers.equals("อากาศเย็น")){
                     weathersId = "2";
-                }else if (weathers == "อากาศแห้งแล้ง"){
+                }else if (weathers.equals("อากาศแห้งแล้ง")){
                     weathersId = "3";
-                }else if (weathers == "อากาศเย็น+หมอก"){
+                }else if (weathers.equals("อากาศเย็น+หมอก")){
                     weathersId = "4";
-                }else if (weathers == "อากาศร้อน+ฝนตก"){
+                }else if (weathers.equals("อากาศร้อน+ฝนตก")){
                     weathersId = "5";
                 }
 
 
-//                if (radioSoidButton == "นอก"){
-//                    radioSoidButtonId = "1";
-//                }else if (radioSoidButton == "ใน"){
-//                    radioSoidButtonId = "2";
-//                }
 
-                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+kindOfSoilId+"&irrigation="+radioSoidButtonId+"&weather="+weathersId;
+
+                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+kindOfSoilId+"&irrigation="+selectRButton+"&weather="+weathersId;
                 Toast.makeText(area.this,url, Toast.LENGTH_SHORT).show();
 
 
@@ -136,8 +145,8 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+//        String text = parent.getItemAtPosition(position).toString();
+//        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     @Override

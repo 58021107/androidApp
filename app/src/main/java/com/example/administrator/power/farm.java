@@ -66,9 +66,9 @@ public class farm extends AppCompatActivity {
                             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                    Intent intent = new Intent(farm.this, FarmDetail.class);
-                                    intent.putExtra("name", farm_lists.get(position).getId());
-                                    startActivity(intent);
+//                                    Intent intent = new Intent(farm.this, FarmDetail.class);
+//                                    intent.putExtra("name", farm_lists.get(position).getId());
+//                                    startActivity(intent);
                                 }
                             });
                         } catch (JSONException e) {
