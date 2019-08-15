@@ -9,6 +9,14 @@ public class Data {
         this.name = name;
     }
 
+    public Data(String rice_id, String rice_name, Object rice_feature, Object rice_area, Object rice_product, Object rice_nature, Object rice_soil, Object rice_irrigation, Object rice_weather) {
+
+    }
+
+    public Data(String soil, String irrigation, Object weathers) {
+
+    }
+
     public String getId() {
         return id;
     }

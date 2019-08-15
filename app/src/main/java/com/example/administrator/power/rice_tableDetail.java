@@ -41,7 +41,7 @@ public class rice_tableDetail extends AppCompatActivity {
     }
 
     private void getJson(final TextView name,final TextView feature, final TextView area, final TextView product, final TextView nature, final TextView soil, final TextView irrigation, final TextView weather, Bundle savedInstanceState) {
-        String newString;
+        String newString = null;
         String url = "";
         if (savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
@@ -49,11 +49,23 @@ public class rice_tableDetail extends AppCompatActivity {
                 newString = null;
             }else {
                 newString = extras.getString("name");
+//                newString = extras.getString("s1");
+//                newString = extras.getString("s2");
+//                newString = extras.getString("s3");
+//                String kindOfSoilId = "";
+//                String selectRButton = "";
+//                String weathersId = "";
                 url = "http://10.0.2.2/project/data/rice_tableDetail.php?id="+newString;
             }
 
-        }else {
-            newString = (String) savedInstanceState.getSerializable("name");
+        }
+        else {
+//            newString = (String) savedInstanceState.getSerializable("s1");
+//            newString = (String) savedInstanceState.getSerializable("s2");
+//            newString = (String) savedInstanceState.getSerializable("s3");
+//            String kindOfSoilId = "";
+//            String selectRButton = "";
+//            String weathersId = "";
             url = "http://10.0.2.2/project/data/rice_tableDetail.php?id="+newString;
         }
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {

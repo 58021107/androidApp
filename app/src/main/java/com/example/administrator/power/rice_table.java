@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,12 +26,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 public class rice_table extends AppCompatActivity {
 
     private RequestQueue mQueue;
     private List<Data> rice_lists = new ArrayList<>();
     private RiceApdapter adapter = new RiceApdapter();
+    private ResourceBundle extras;
+    private Object savedInstanceState;
 
 
     @Override
@@ -45,8 +49,25 @@ public class rice_table extends AppCompatActivity {
     }
 
     private void getJson(final ListView listView) {
-        String url = "http://10.0.2.2/Project/data/rice_table.php";
 
+        String soil;
+        String irrigation;
+        String weather;
+        String url = "";
+
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if (extras == null){
+                soil= null;
+                irrigation = null;
+                weather = null;
+            }else {
+                soil = extras.getString("s1");
+                irrigation = extras.getString("s2");
+                weather = extras.getString("s3");
+                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+soil+"&irrigation="+irrigation+"&weather="+weather;
+            }
+        }
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -54,10 +75,10 @@ public class rice_table extends AppCompatActivity {
                     for (int i = 0; i < response.length(); i++){
                         JSONObject rice = response.getJSONObject(i);
 
-                        String rice_id = rice.getString("rice_ta_id");
+                        String  rice_id = rice.getString("rice_ta_id");
                         String rice_name = rice.getString("rice_ta_name");
 
-                        rice_lists.add(new Data(rice_id,rice_name));
+                        rice_lists.add(new Data(rice_id, rice_name));
                     }
 
 
@@ -66,7 +87,7 @@ public class rice_table extends AppCompatActivity {
                     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Intent intent = new Intent(rice_table.this, rice_tableDetail.class);
+                            Intent intent = new Intent(rice_table.this, RiceDetail.class);
                             intent.putExtra("name", rice_lists.get(position).getId());
                             startActivity(intent);
                         }

@@ -1,5 +1,6 @@
 package com.example.administrator.power;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,11 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.administrator.power.data.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class area extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String url = "";
@@ -21,6 +27,7 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
 
     private RadioButton radioSoidButton;
     private String radioSoidButtonId;
+
 
 
     @Override
@@ -45,18 +52,68 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
         Display();
 
 
-//        Button product = (Button)findViewById(R.id.Display);
-//        product.setOnClickListener(new View.OnClickListener() {
+
+//        Button Display = (Button)findViewById(R.id.Display);
+//        Display.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                //Intent intent = new Intent(area.this,rice_tableDetail.class);
-//                //startActivity(intent);
+//                final Spinner spinner1 = findViewById(R.id.spinner1);
+//                final Spinner spinner2 = findViewById(R.id.spinner2);
 //
-//            }
+//                String kindOfSoil = spinner1.getSelectedItem().toString();
+//                String weathers = spinner2.getSelectedItem().toString();
+//
+//
+//
+//                final RadioGroup radioSoid = findViewById(R.id.radioSoil);
+//                final RadioButton radioButton1 = findViewById(R.id.radio_out);
+//                final RadioButton radioButton2 = findViewById(R.id.radio_in);
+
+//                Toast.makeText(area.this,kindOfSoilId,Toast.LENGTH_SHORT).show();
+//                if (kindOfSoil.equals("ดินทราย")){
+//                    kindOfSoilId = "1";
+//                }else if (kindOfSoil.equals("ดินเหนียว")){
+//                    kindOfSoilId = "2";
+//                }else if (kindOfSoil.equals("ดินร่วน")){
+//                    kindOfSoilId = "3";
+//                }
+
+//                int selectRButton = 0;
+//
+//                if ((radioSoidButton.getText()).equals("นอก")){
+//                    selectRButton = 1;
+//                }else if ((radioSoidButton.getText()).equals("ใน")){
+//                    selectRButton = 2;
+//                }
+
+//                if (weathers.equals("อากาศร้อน" )){
+//                    weathersId = "1";
+//                }else if (weathers.equals("อากาศเย็น")){
+//                    weathersId = "2";
+//                }else if (weathers.equals("อากาศแห้งแล้ง")){
+//                    weathersId = "3";
+//                }else if (weathers.equals("อากาศเย็น+หมอก")){
+//                    weathersId = "4";
+//                }else if (weathers.equals("อากาศร้อน+ฝนตก")){
+//                    weathersId = "5";
+//                }
+
+
+//                Toast.makeText(area.this,kindOfSoilId,Toast.LENGTH_SHORT).show();
+//                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+kindOfSoilId+"&irrigation="+selectRButton+"&weather="+weathersId;
+//                Toast.makeText(area.this,url, Toast.LENGTH_SHORT).show();
+
+//                Intent intent = new Intent(area.this,rice_table.class);
+//                intent.putExtra("s1",kindOfSoilId);
+//                intent.putExtra("s2",selectRButton);
+//                intent.putExtra("s2",weathersId);
+//                startActivity(intent);
+
+            }
 //        });
 
 
-    }
+//    }
 
     private void Display() {
         Button Display = findViewById(R.id.Display);
@@ -94,12 +151,12 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
 
 
 //                Toast.makeText(area.this,"aaaaaaaaaaaa",Toast.LENGTH_SHORT).show();
-                int selectRButton = 0;
+                String selectRButton = "0";
 
                 if ((radioSoidButton.getText()).equals("นอก")){
-                    selectRButton = 1;
+                    selectRButton = "1";
                 }else if ((radioSoidButton.getText()).equals("ใน")){
-                    selectRButton = 2;
+                    selectRButton = "2";
                 }
 
 
@@ -116,11 +173,15 @@ public class area extends AppCompatActivity implements AdapterView.OnItemSelecte
                     weathersId = "5";
                 }
 
+                Intent intent = new Intent(area.this,rice_table.class);
+                intent.putExtra("s1",kindOfSoilId);
+                intent.putExtra("s2",selectRButton);
+                intent.putExtra("s3",weathersId);
+                startActivity(intent);
 
 
-
-                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+kindOfSoilId+"&irrigation="+selectRButton+"&weather="+weathersId;
-                Toast.makeText(area.this,url, Toast.LENGTH_SHORT).show();
+//                url = "http://10.0.2.2/Project/data/rice_table.php?soil="+kindOfSoilId+"&irrigation="+selectRButton+"&weather="+weathersId;
+//                Toast.makeText(area.this,url, Toast.LENGTH_SHORT).show();
 
 
             }
